@@ -1,0 +1,29 @@
+﻿<Window x:Name="PoliBox_Server" x:Class="Server_v2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Server_v2"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="MainWindow" Height="622" Width="903.465" Background="#FF2234A9" BorderBrush="White" Icon="Resources/icon.jpg" Foreground="#FFF8F8F8" WindowStartupLocation="Manual" ResizeMode="CanMinimize">
+    <Grid Background="#FFFC7A08" Margin="10,95,10.333,10.333">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="UtentiConnessi" Height="438" Margin="672,40,10.111,10" VerticalAlignment="Top" Background="White" BorderBrush="White" Foreground="#FF2234A9" SelectionChanged="UtentiConnessi_SelectionChanged" Grid.Column="1"/>
+        <TextBlock x:Name="Utenti_Connessi" Margin="0,15,10.111,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" Height="20" TextAlignment="Center" Foreground="White" Grid.Column="1" HorizontalAlignment="Right" Width="197"/>
+        <TextBox x:Name="txtConsole" Margin="10,40,212.111,124.444" TextWrapping="Wrap" Background="White" BorderBrush="White" Foreground="#FF2234A9" SelectionBrush="#FFFFC342" TextChanged="Console_TextChanged" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1,15,0,0" TextWrapping="Wrap" Text="Console" VerticalAlignment="Top" Height="20" Width="666" TextAlignment="Center" Foreground="#FFFEFEFE" Grid.Column="1"/>
+        <Button x:Name="PrintUsers" Content="Print users" HorizontalAlignment="Left" Margin="10,0,0,80" Width="167" Click="button_Click" Grid.Column="1" Height="26" VerticalAlignment="Bottom" Background="White" BorderBrush="White" Foreground="#FFFC7A08"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="93" Margin="1,-99,0,492.222" VerticalAlignment="Bottom" Width="213" Source="Resources/frontimage.png" Grid.ColumnSpan="2">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/frontimage.png" Stretch="UniformToFill"/>
+            </Image.OpacityMask>
+        </Image>
+        <Label x:Name="label" Content="PoliBox - Server" HorizontalAlignment="Left" Margin="720,-74,0,528.222" VerticalAlignment="Bottom" Foreground="White" FontSize="18.667" Height="32" Grid.Column="1" Width="147"/>
+        <Button x:Name="PrintFolders" Content="Print Folders" HorizontalAlignment="Left" Margin="10,0,0,49" Width="167" Click="PrintFolders_Click" Grid.Column="1" Height="26" VerticalAlignment="Bottom" Background="White" BorderBrush="White" Foreground="#FFFC7A08"/>
+        <Button x:Name="PrintFiles" Content="Print Files" HorizontalAlignment="Left" Margin="10,0,0,18" Width="167" Click="PrintFiles_Click" Grid.Column="1" Height="26" VerticalAlignment="Bottom" Background="White" BorderBrush="White" Foreground="#FFFC7A08"/>
+    </Grid>
+</Window>

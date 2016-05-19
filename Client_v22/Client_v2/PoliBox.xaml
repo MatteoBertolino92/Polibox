@@ -1,0 +1,26 @@
+﻿<Window x:Class="Client_v2.PoliBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client_v2"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Window.Title="PoliBox" Height="239.925" Width="315.113" Background="#FF2233A8" Icon="Resources/icon.jpg">
+    <Grid Background="#FFFF7C11" Margin="10,60,10,10">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="53" Margin="-2,-56,0,0" VerticalAlignment="Top" Width="128" Source="Resources/frontimage.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Resources/frontimage.png" Stretch="UniformToFill"/>
+            </Image.OpacityMask>
+        </Image>
+        <Label x:Name="Title" Content="PoliBox" HorizontalAlignment="Right" Margin="0,-56,1.444,0" Foreground="White" FontSize="13.333" Height="26" VerticalAlignment="Top"/>
+        <Ellipse x:Name="ell1" Fill="Red" Stroke="Black" RenderTransformOrigin="-0.111,-5.409" Margin="0,-19,1.444,0" Height="12" VerticalAlignment="Top" HorizontalAlignment="Right" Width="12"/>
+        <TextBlock x:Name="Status1" HorizontalAlignment="Right" Margin="0,-19,18.444,0" TextWrapping="Wrap" Text="Not connected" VerticalAlignment="Top" Width="63" Foreground="White" FontSize="9.333" TextAlignment="Right"/>
+        <TextBlock x:Name="WelcomeTextBlock" Margin="10,10,10,0" TextWrapping="Wrap" Text="Welcome" VerticalAlignment="Top" FontSize="16" TextDecorations="{x:Null}" Foreground="White" TextAlignment="Center"/>
+        <Button x:Name="DisconnectButton" Content="Disconnect" Margin="10,111,10,0" VerticalAlignment="Top" Background="White" Foreground="#FFFF7C11" BorderBrush="White" MouseLeftButtonDown="DisconnectButton_MouseLeftButtonDown" MouseLeftButtonUp="DisconnectButton_MouseLeftButtonUp" Click="DisconnectButton_Click"/>
+        <Button x:Name="RecoveryButton" Content="Recovery" Margin="10,86,10,0" VerticalAlignment="Top" Background="White" Foreground="#FFFF7C11" BorderBrush="White" MouseLeftButtonDown="RecoveryButton_MouseLeftButtonDown" MouseLeftButtonUp="RecoveryButton_MouseLeftButtonUp" Click="RecoveryButton_Click"/>
+        <Button x:Name="ShowContentButton" Content="Show Content" Margin="10,61,10,0" VerticalAlignment="Top" Background="White" Foreground="#FFFF7C11" BorderBrush="White" MouseLeftButtonDown="ShowContentButton_MouseLeftButtonDown" MouseLeftButtonUp="ShowContentButton_MouseLeftButtonUp" Click="ShowContentButton_Click"/>
+        <Button x:Name="SyncronizeButton_Copy" Content="Sincronize" Margin="10,36,10,0" Background="White" Foreground="#FFFF7C11" BorderBrush="White" MouseLeftButtonDown="SyncronizeButton_MouseLeftButtonDown" MouseLeftButtonUp="SyncronizeButton_MouseLeftButtonUp" Click="SyncroButton_Click" Height="20" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

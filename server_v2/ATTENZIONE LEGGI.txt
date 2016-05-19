@@ -1,0 +1,5 @@
+Per far funzionare il tutto senza errori devi cambiare il path delle immagini che ci sono 
+nell'interfaccia in:
+file:///<tuo percorso del progetto>/Server_v2/Server_v2/bin/Debug/image/frontimage.png (per il logo frontale)
+e
+file:///<tuo percorso del progetto>Server_v2/Server_v2/bin/Debug/image/logobianco.png (per l'icona)

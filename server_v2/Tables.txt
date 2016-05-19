@@ -1,0 +1,29 @@
+CREATE TABLE USER(Username TEXT PRIMARY KEY,
+                  Password TEXT,
+                  Sale TEXT,
+                  ClientPath TEXT REFERENCES FOLDER(FolderPath) ON UPDATE CASCADE,
+                  ServerPath TEXT);
+
+CREATE TABLE FOLDER(FolderPath TEXT,
+                    User TEXT,
+                    ParentPath TEXT," +
+                    TimestampFolder DATETIME DEFAULT CURRENT_TIMESTAMP,
+                    TimestampParent DATETIME,
+                    Present TEXT,
+
+                    PRIMARY KEY(FolderPath,User,TimestampFolder), 
+                    FOREIGN KEY(User) REFERENCES USER (Username) ON DELETE CASCADE ON UPDATE CASCADE,
+                    FOREIGN KEY(ParentPath, User, TimestampParent)
+                    REFERENCES FOLDER(FolderPath, User, TimestampFolder) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE FILE(Filename TEXT,
+                  User TEXT,
+                  Folder TEXT, 
+                  Checksum TEXT,
+                  TimestampFile DATETIME DEFAULT CURRENT_TIMESTAMP,
+                  TimestampFolder DATETIME,
+		  Present TEXT,
+
+                  PRIMARY KEY(Filename, User, Folder, Checksum),
+                  FOREIGN KEY(Folder, User, TimestampFolder)
+                  REFERENCES FOLDER(FolderPath, User, TimestampFolder) ON DELETE CASCADE ON UPDATE CASCADE);
